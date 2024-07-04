@@ -1,0 +1,206 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 53rem;
+}
+
+.hello {
+  min-height: 100vh;
+  background-color: #222;
+  display: grid;
+  place-items: center;
+  color: #eee;
+}
+
+.hello__inner {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  gap: 2rem;
+}
+
+.content {
+  display: inline;
+}
+
+.email-link,
+.telegramm,
+.whatsapp {
+  color: #eee;
+  text-decoration: none;
+}
+
+.projects {
+  min-height: 100vh;
+  background-color: #eee;
+  color: #222;
+  display: grid;
+  justify-items: center;
+  padding-top: 3rem;
+}
+
+.projects__list {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 0;
+}
+
+.projects__item {
+  border: 1px #222 solid;
+  padding-bottom: 4rem;
+}
+
+.projects__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projects__demo {
+  margin-top: 4rem;
+}
+
+.projects__demo-link {
+  border: 2px solid #222;
+  background-color: transparent;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .email-link span,
+  .projects__demo-link {
+    transition: all 0.5s ease;
+  }
+
+  .telegramm,
+  .whatsapp {
+    transition: all 0.5s ease;
+  }
+
+  .telegramm:hover {
+    color: #0088cc;
+  }
+
+  .whatsapp:hover {
+    color: #25d366;
+  }
+
+  .email-link:hover span:first-child {
+    color: #3e65cf;
+  }
+
+  .email-link:hover span:nth-child(2) {
+    color: #c71610;
+  }
+
+  .email-link:hover span:nth-child(3) {
+    color: #f2a60c;
+  }
+
+  .email-link:hover span:last-child {
+    color: #08851b;
+  }
+
+  .projects__demo-link:hover {
+    background-color: #222;
+    color: #eee;
+  }
+}
+
+@media (hover: none) {
+  .telegramm:active {
+    color: #0088cc;
+  }
+
+  .whatsapp:active {
+    color: #25d366;
+  }
+
+  .email-link:active span:first-child {
+    color: #3e65cf;
+  }
+
+  .email-link:active span:nth-child(2) {
+    color: #c71610;
+  }
+
+  .email-link:active span:nth-child(3) {
+    color: #f2a60c;
+  }
+
+  .email-link:active span:last-child {
+    color: #08851b;
+  }
+
+  .projects__demo-link:active {
+    background-color: #222;
+    color: #eee;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .telegramm svg {
+    width: 30px;
+    height: 21px;
+  }
+
+  .whatsapp svg {
+    width: 30px;
+    height: 25px;
+  }
+
+  .projects__item {
+    padding-bottom: 2rem;
+  }
+
+  .projects__demo {
+    margin-top: 2rem;
+  }
+
+  .projects__demo-link {
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 0 0.7rem;
+  }
+}
